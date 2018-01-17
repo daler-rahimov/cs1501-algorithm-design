@@ -1,0 +1,85 @@
+The runtime that was discussed in the lectures was maintained for PQ (constant to find; logarithmic to insert, remove, or update) by creating multiple PQs. And the space complexity 
+of O(n*SizeOf(Apt instance)) is achieved by storing only references in PQ. Detailed breakdown is below.
+
+In order to implement project 3 classes were created:    
+
+1.	Apt.java as described in the specification for this project and this class has following information 
+with getter and setters :
+	*	A street address (e.g., 4200 Forbes Ave.)
+	*	An apartment number (e.g., 3601)
+	*	The city the apartment is in (e.g., Pittsburgh)
+	*	The apartment's ZIP code (e.g., 15213)
+	*	The price to rent (in US dollars per month)
+	*	The square footage of the apartment
+
+       Main Operations:
+
+	*	getUniqueIdentifier() - This method returns unique identifier of an apartment  
+		streetAddress + aptNumber + zip.
+
+
+2.	MaxMinPQIndexTableApt.java is a Max Min Priority Queue for Apt class with indirections (Code from book has been used for implementation of Priority queue itself). HashMap is used as an index 
+table where [address] + [apartment number] + [zip code] is a Key for HashMap and index of the 
+item in Priority Queue is the Value. Max or Min is set by implementing the abstract method 
+isHigherPriority(Apt a1, Apt a2). IsHigherPriority returns true if a1 is higher priority than a2 false otherwise.
+
+       Main Operations:
+
+	*	isInPQ(Apt a) - Check if the given Apt class instance is the queue:
+		o	Runtime: O(1) since we are using HashMap as a index table.	
+
+	*	updatePriceIfExist(Apt apt) - Update the price of Apt if it exist in the queue.
+		o	Runtime: O(lg(n)) 
+		O(1) to find the given Apt and update. O(lg(n)) to restore heap property. 
+
+	*	deleteIfExist(Apt apt) - Delete an item from the priority queue. Index starts from 		1 to n. 
+		o	Runtime: O(lg(n))
+		O(1) to find the item and O(lg(n)) to restore heap property.
+
+	*	pick() - Returns a highest priority key in this priority queue.
+		o	Runtime: O(1)
+3.	MultiwayPQ.java - This class has multiple priority queues that hold different prioritized references of the same object. When any operation is preformed it affects all priority queues. Two inner classes are created; MinPrice which extends MaxMinPQIndexTableApt where lower priced item has higher 
+priority, MaxFootage which extends MaxMinPQIndexTableApt and bigger footage has higher priority. 
+
+	o	Space: O(n*SizeOf(Apt instance)) 
+		Not a lot of space is used since only the references are stored in every Priority Queues. 
+		O(n*SizeOf(Apt instance) + n*2*(SizeOf(reference))+n*NumberOfCities*(SizeOf(reference)))  
+
+	Fields:
+	*	maxFootagePQ - Priority Queue where references with bigger footage has higher priority.   
+
+	*	minPricePQ - - Priority Queue where references with lower price has higher priority
+
+	*	HashMap<String, MinPrice> minPriceByCity - Collection of Priorities Queues one for every 
+		city. Where lower price item has higher priority. 
+
+	*	HashMap<String, MaxFootage> maxFootageByCity - Collection of Priorities Queues one for 
+		every city. Where bigger footage has higher priority.
+	
+	Main Operations:
+
+	*	add (Apt apt) - Add an apartment to all the queues
+		o	Runtime: O(lg(n))
+			O(lg(n)) for inserting in to maxFootagePQ. O(lg(n)) for inserting in to minPricePQ. 
+			O(1) to find the city and O(lg(n)) to insert for maxFootageByCity and minPriceByCity. 
+			So O(lg(n) + lg(n) + 2*(1+lg(n))) = O(lg(n)).
+
+	*	delete(Apt apt) - find the apartment with the same [address] + [apartment number] + [zip code] and removes it.
+		o	Runtime: O(lg(n))
+
+	*	updatePrice(Apt apt) - Update price if it exists in the queue. Only price related queues are 
+		restored. 
+		o	Runtime: O(lg(n)) 
+
+	*	getLowestPriceApt() -Get the lowest priced apartment and returns the instance of Apt class.
+		o	Runtime: O(1)
+	
+	*	getLowestPriceAptByCity(String city) - Get the lowest priced apartment for given city.
+		o	Runtime: O(1) 
+			O(1) to find the city's Priority Queue in HashMap and O(1) to return the root.
+
+	*	getHighestFootage() - Get the highest footage apartment.
+		o	Runtime: O(1)
+
+	*	getHighestFootageByCity(String city) - Get the highest footage apartment for given city.
+		o	Runtime: O(1) 

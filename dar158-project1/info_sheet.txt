@@ -1,0 +1,56 @@
+========================================
+CS/COE 1501 Assignment Information Sheet
+----------------------------------------
+
+You must submit an information sheet with every assignment.  Also be sure
+to submit all materials following the procedures described on the
+submission procedures page.
+
+Name: Daler Rahimov   
+
+Lecture section:  CS1501 TH 1-2:15PM @ BENDM G26
+
+Recitation day and time: F 10:00AM-10:50AM 
+
+Assignment #: 1 
+
+Program due date:  9-12 @ 11:59PM 
+
+Handed in date: 9-28  
+
+Source code file name(s): pw_check.java
+	
+
+
+
+
+
+
+Other file name(s) (if relevant):
+
+
+
+
+
+
+
+Does your program run without error?:
+
+If not, what is/are the error(s) and which parts of your program run
+correctly?:
+Runs correctly but it's too slow takes about 30-35 min to generate passwords and 
+about 1min to check for them. 
+
+
+
+
+
+
+Additional comments to the grader:
+
+DLB class has some methods that are used only for debugging not for the project. 
+
+
+
+
+

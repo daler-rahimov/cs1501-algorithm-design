@@ -1,0 +1,3 @@
+For key/value symbol table HashMap is used since it has O(1) lookup time. And to 
+find 10 valid passwords that share the longest prefix with the entered password 
+DLB Trie is used since Hash table does not solve the predecessor lookup.

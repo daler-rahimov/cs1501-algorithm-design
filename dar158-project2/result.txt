@@ -1,0 +1,104 @@
++----------------------------------------------------+------------+--------------+-------------+
+|                       Result                       |            |              |             |
++----------------------------------------------------+------------+--------------+-------------+
+|                                                    | Compressed | Compression  |             
+|                                                    |    size    |     ratio    |             
++----------------------------------------------------+------------+--------------+-------------+
+| all.tar 3031040 bytes                              |            |              |             |
+| The unmodified LZW                                 | 1252056    |     2.42     |             |
+| MyLZW.java using Do Nothing mode                   | 1094370    |     2.76     |             |
+| MyLZW.java using Reset mode                        | 1210321    |     2.50     |             |
+| MyLZW.java using Monitor mode                      | 1094370    |     2.77	 |	       |
+| WinRAR                                             |  881814    |     3.44     |             |
++----------------------------------------------------+------------+--------------+-------------+
+| assig2.doc  87040 bytes                            |            |              |             |
+| The unmodified LZW                                 | 74574      |    1.17      |             |
+| MyLZW.java using Do Nothing mode                   | 40040      |    2.17      |             |
+| MyLZW.java using Reset mode                        | 40040      |    2.17      |             |
+| MyLZW.java using Monitor mode                      | 40040      |    2.17      |             |
+| WinRAR                                             | 22445      |    3.88      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| dmps.tar  1105920 bytes                            |            |              |             |
+| The unmodified LZW                                 | 925079     |    1.19      |             |
+| MyLZW.java using Do Nothing mode                   | 80914      |    13.67     |             |
+| MyLZW.java using Reset mode                        | 80914      |    13.67     |             |
+| MyLZW.java using Monitor mode                      | 80914      |    13.67     |             |
+| WinRAR                                             | 60893      |    18.17     |             |
++----------------------------------------------------+------------+--------------+-------------+
+| code.txt  72351  bytes                             |            |              |             |
+| The unmodified LZW                                 | 30980      |    2.34      |             |
+| MyLZW.java using Do Nothing mode                   | 24545      |    2.95      |             |
+| MyLZW.java using Reset mode                        | 24545      |    2.95      |             |
+| MyLZW.java using Monitor mode                      | 24545      |    2.95      |             |
+| WinRAR                                             | 14567      |    4.97      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| code2.txt 57701  bytes                             |            |              |             |
+| The unmodified LZW                                 | 24138      |    2.39      |             |
+| MyLZW.java using Do Nothing mode                   | 20516      |    2.81      |             |
+| MyLZW.java using Reset mode                        | 20516      |    2.81      |             |
+| MyLZW.java using Monitor mode                      | 20516      |    2.81      |             |
+| WinRAR                                             | 14567      |    3.96      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| edit.exe  236328 bytes                             |            |              |             |
+| The unmodified LZW                                 | 250742     |    0.94      |             |
+| MyLZW.java using Do Nothing mode                   | 156410     |    1.51      |             |
+| MyLZW.java using Reset mode                        | 152231     |    1.55      |             |
+| MyLZW.java using Monitor mode                      | 156410     |    1.51      |             |
+| WinRAR                                             | 113182     |    2.08      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| frosty.jpg  126748 bytes                           |            |              |             |
+| The unmodified LZW                                 | 177453     |    0.71      |             |
+| MyLZW.java using Do Nothing mode                   | 163790     |    0.77      |             |
+| MyLZW.java using Reset mode                        | 171170     |    0.74      |             |
+| MyLZW.java using Monitor mode                      | 163790     |    0.77      |             |
+| WinRAR                                             | 127025     |    0.99      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| gone_fishing.bmp 17336 bytes                       |            |              |             |
+| The unmodified LZW                                 | 9278       |    1.87      |             |
+| MyLZW.java using Do Nothing mode                   | 8963       |    1.94      |             |
+| MyLZW.java using Reset mode                        | 8963       |    1.94      |             |
+| MyLZW.java using Monitor mode                      | 8963       |    1.94      |             |
+| WinRAR                                             | 8572       |    2.02      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| large.txt 1220703 bytes                            |            |              |             |
+| The unmodified LZW                                 | 605184     |    2.02      |             |
+| MyLZW.java using Do Nothing mode                   | 501778     |    2.43      |             |
+| MyLZW.java using Reset mode                        | 501778     |    2.43      |             |
+| MyLZW.java using Monitor mode                      | 501778     |    2.43      |             |
+| WinRAR                                             | 425310     |    2.87      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| Lego-big.gif 93371  bytes                          |            |              |             |
+| The unmodified LZW                                 | 128973     |    0.72      |             |
+| MyLZW.java using Do Nothing mode                   | 122494     |    0.76      |             |
+| MyLZW.java using Reset mode                        | 122494     |    0.76      |             |
+| MyLZW.java using Monitor mode                      | 122494     |    0.76      |             |
+| WinRAR                                             | 92497      |    1.00      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| medium.txt 25407 bytes                             |            |              |             |
+| The unmodified LZW                                 | 13197      |    1.93      |             |
+| MyLZW.java using Do Nothing mode                   | 12531      |    2.03      |             |
+| MyLZW.java using Reset mode                        | 12531      |    2.03      |             |
+| MyLZW.java using Monitor mode                      | 12531      |    2.03      |             |
+| WinRAR                                             | 10795      |    2.35      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| texts.tar 1382400 bytes                            |            |              |             |
+| The unmodified LZW                                 | 1012179    |    1.37      |             |
+| MyLZW.java using Do Nothing mode                   | 597848     |    2.31      |             |
+| MyLZW.java using Reset mode                        | 590489     |    2.34      |             |
+| MyLZW.java using Monitor mode                      | 597848     |    2.31      |             |
+| WinRAR                                             | 462714     |    2.99      |             |
++----------------------------------------------------+------------+--------------+-------------+
+| wacky.bmp 921654 bytes                             |            |              |             |
+| The unmodified LZW                                 | 4302       |    214.24    |             |
+| MyLZW.java using Do Nothing mode                   | 3951       |    233.27    |             |
+| MyLZW.java using Reset mode                        | 3951       |    233.27    |             |
+| MyLZW.java using Monitor mode                      | 3951       |    233.27    |             |
+| WinRAR                                             | 2403       |    383.54    |             |
++----------------------------------------------------+------------+--------------+-------------+
+| winnt256.bmp 157044 bytes                          |            |              |             |
+| The unmodified LZW                                 | 159050     |    0.98      |             |
+| MyLZW.java using Do Nothing mode                   | 62932      |    2.50      |             |
+| MyLZW.java using Reset mode                        | 62932      |    2.50      |             |
+| MyLZW.java using Monitor mode                      | 62932      |    2.50      |             |
+| WinRAR                                             | 48509      |    3.24      |             |
++----------------------------------------------------+------------+--------------+-------------+
